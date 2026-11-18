@@ -633,3 +633,187 @@ img {
         font-size: 28px;
     }
 }
+/*===========================
+    Pagina Catas
+ ============================*/
+ .pagina-catas {
+    width: 100%;
+    overflow: hidden;
+ }
+ 
+ /* Portada */
+ .hero-catas {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    padding: 70px 10%;
+    background: var(--color-texto);
+    color: var(--color-blanco);
+ }
+ .contenido-hero-catas {
+    max-width: 720px;
+ }
+ .etiqueta-catas {
+    display: inline-block;
+    color: var(--color-secundario);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+ }
+ .contenido-hero-catas h1 {
+    font-size: clamp(36px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+ }
+ .contenido-hero-catas p {
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--color-fondo);
+ }
+ .boton-catas {
+    display: inline-block;
+    padding: 14px 28px;
+    background:var(--color-secundario);
+    color: var(--color-blanco);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background  0.3s;
+ }
+ .boton-catas:hover {
+    background: var(--color-principal);
+}
+/* Introduccion */
+
+.introduccion-catas {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 85px 25px;
+    text-align: center;
+}
+.introduccion-catas h2,
+.encabezado-catas h2,
+.texto-inscripcion h2 {
+    color: var(--color-texto);
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.introduccion-catas p {
+    color: #665b53;
+    font-size: 16px;
+    line-height: 1.9;
+}
+/* Tarjeta Catas */
+.proximas-catas {
+    padding: 75px 8%;
+    background: var(--color-fondo);
+}
+.encabezado-catas {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.rejillas-catas {
+    display: grid;
+    grid-template-columns: repeat(3 minmax(0, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: 0 auto;
+}
+.tarjeta.cata {
+    background: var(--color-blanco);
+    padding: 35px 28px;
+    border: 1px solid var(--color-fondo);
+}
+.numero-cata {
+    color: var(--color-secundario);
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.tarjeta-cata h3 {
+    color: var(--color-texto);
+    font-size: 21px;
+    margin-bottom: 15px;
+}
+.tarjeta-cata p {
+    color: #665b53;
+    line-height: 1.8;
+}
+/* Formulario de inscripccion */
+
+.inscripcion-catas {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    gap: 60px;
+    padding: 85px 10%;
+    align-items: start;
+}
+.texto-inscripcion p {
+    color: #665b53;
+    line-height: 1.9;
+}
+.formulario-catas {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.formulario-catas label {
+    color: var(--color-texto);
+    font-weight: 600;
+    margin-top: 8px;
+}
+.formulario-catas input,
+.formulario-catas select,
+.formulario-catas textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--color-fondo);
+    background: var(--color-blanco);
+    font-family: inherit;
+    font-size: 15px;
+}
+.formulario-catas input:focus,
+.formulario-catas select:focus,
+.formulario-catas textarea:focus {
+    outline: 2px solid var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+.formulario-catas button {
+    padding: 15px;
+    margin-top: 12px;
+    border: none;
+    background: var(--color-texto);
+    color: var(--color-blanco);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.formulario-catas button:hover {
+    background: var(--color-secundario);
+}
+
+@media (max-width: 768px) {
+    .hero-catas {
+         min-height: 380px;
+         padding: 55px 7%;
+    }
+    .introduccion-catas {
+        padding: 60px 25px;
+
+    }
+    .proximas-catas {
+        padding: 60px 7%;
+    }
+    .rejillas-catas {
+        grid-template-columns: 1fr;
+    }
+    .inscripcion-catas {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 60px 7%;
+    }
+}
+
+
