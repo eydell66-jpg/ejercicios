@@ -485,6 +485,151 @@ img {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 }
+/* Pagina Quienes Somos */
+.pagina-quienes-somos {
+    width: 100%;
+    overflow: hidden;
+}
+/* Portada */
+.hero-quienes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 480px;
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+}
+.contenido-quienes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 65px 10%;
+}
+.etiqueta-quienes {
+    color: var(--color-secundario);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+.contenido-quienes h1 {
+    font-family: Georgia, serif;
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+.contenido-quienes p {
+    color: var(--color-fondo);
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 450px;
+}
+.imgen-quienes {
+    min-height: 480px;
+}
+.imagen-quienes img {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: cover;
+}
+/* Filosofia */
+.filosofia-quienes {
+    max-width: 850px;
+    margin: auto;
+    padding: 85px 25px;
+    text-align: center;
+}
+.filosofia-quienes h2,
+.encabezado-valores h2{
+    font-family: Georgia, serif;
+    font-size: 36px;
+    color:var(--color-texto);
+    margin-bottom: 25px;
+}
+.filosofia-quienes p {
+    color: #75675E;
+    font-size: 16px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+/*Nuestros Valores */
+.valores-quienes {
+    background-color: var(--color-fondo);
+    padding: 80px 7%;
 
-
-
+}
+.encabezado-valores {
+    text-align: center;
+    margin-bottom: 45px;
+}
+.rejilla-valores {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1150px;
+    margin: 0 auto;
+   
+}
+.tarjeta-valor {
+    background-color: var(--color-blanco);
+    padding: 35px, 25px;
+    text-align: center;
+    border: 1px solid var(--color-fondo);
+    transition: transform 0.3s;
+}
+.tarjeta-valor:hover {
+    transform: translateY();
+}
+.tarjeta-valor h3 {
+    font-family: Georgia, serif;
+    color: var(--color-principal);
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+.tarjeta-valor p {
+    color: #75675E;
+    font-size: 14px;
+    line-height: 1.8;
+}
+/* Final */
+.final-quienes {
+    background-color: var(--color-texto);
+    color: var(--color-blanco);
+    padding: 85px 25px;
+    text-align: center;
+}
+.final-quienes h2 {
+    font-family: Georgia, serif;
+    font-size: 34px;
+    margin-bottom: 20px;
+}
+.final-quienes p {
+    color: var(--color-fondo);
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+@media (max-width: 760px) {
+    .hero-quienes {
+        grid-template-columns: 1fr;
+    }
+    .contenido-quienes {
+        padding: 55px 8%;
+    }
+    .contenido-quienes h1 {
+        font-size: 34px;
+    }
+    .imagen-quienes img {
+        min-height: 300px;
+        max-height: 350px;
+    }
+    .rejilla-valores {
+        grid-template-columns: 1fr;
+    }
+    .filosofia-quienes {
+        padding: 60px 25px;
+    }
+    .final-quienes h2 {
+        font-size: 28px;
+    }
+}

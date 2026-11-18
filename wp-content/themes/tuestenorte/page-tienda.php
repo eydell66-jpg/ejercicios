@@ -61,7 +61,7 @@
                     <option value="oscuro">Tueste oscuro</option>
                 </select>
 
-                <strong class="precio-cafe">11,90 €</stong>
+                <strong class="precio-cafe">11,90 €</strong>
             </div>
         </article>
         <!-- cafe 3 -->
