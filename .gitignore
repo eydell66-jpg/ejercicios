@@ -1,47 +1,13 @@
-
-# ==========================================
-# 1. IGNORAR TODO POR DEFECTO (CORE DE WP)
-# ==========================================
-# Ignora todos los archivos y carpetas de la raíz (wp-admin, wp-includes, wp-*.php, etc.)
 /*
-
-# ==========================================
-# 2. EXCEPCIONES DEL PROYECTO
-# ==========================================
-# Permitir este mismo archivo .gitignore
 !.gitignore
-
-# Permitir el acceso a la carpeta wp-content
 !wp-content/
-
-# ==========================================
-# 3. GESTIÓN DENTRO DE WP-CONTENT
-# ==========================================
-# Ignorar todo dentro de wp-content por defecto
 wp-content/*
-
-# Permitir las carpetas de plugins, temas y traducciones
-!wp-content/plugins/
 !wp-content/themes/
-!wp-content/languages/
-
-# ==========================================
-# 4. OPCIONAL: IGNORAR TEMAS/PLUGINS DE TERCEROS
-# ==========================================
-# Si NO quieres subir los temas por defecto de WordPress, descomenta estas líneas:
-# wp-content/themes/twentytwenty*
-
-# Si quieres ignorar todos los plugins excepto los tuyos propios:
-# wp-content/plugins/*
-# !wp-content/plugins/mi-plugin-personalizado/
-
-# ==========================================
-# 5. ARCHIVOS BASURA, CACHÉ Y SISTEMA
-# ==========================================
+wp-content/themes/*
+!wp-content/themes/tuestenorte/
 *.log
 *.sql
 *.zip
-*.tar.gz
 .DS_Store
 Thumbs.db
 node_modules/
