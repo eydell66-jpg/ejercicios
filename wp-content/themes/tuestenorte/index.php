@@ -1,82 +1,56 @@
-
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-
-    <?php the_title();?>
-    <?php the_content();?>
-
-<?php endwhile; else: ?>
-    <p><?php esc_html_e( 'Lo sentimos, no se encontraron entradas.' ); ?></p>
-<?php endif; ?>
-
 <?php get_header(); ?>
 
-<main>
+<main class="pagina-blog">
+    <section class="cabecera-blog">
+        <span class="etiqueta-blog">TUESTE NORTE</span>
+        <h1>Nuestro blog</h1>
+        <p>Historias, consejos y curiosidades del fascinante mundo del café.</p>
+    </section>
 
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Descubre el auténtico sabor del café</h1>
+    <section class="listado-entradas">
+        <?php if (have_posts() ) :the_post(); ?>
+        
+            <?php while ( have_posts() ) : the_post(); ?>
+                <article class="tarjeta-entrada">
 
-            <p>
-                Explora nuestra selección de cafés
-                y descubre nuevos aromas y sabores.
-            </p>
+                    <?php if ( has_post_thumbail() ) : ?>
+                         <a href="<?php the_permalink(); ?>" class="imagen-entrada">
+                            <?php the_post_thumbail('large'); ?>
+                        </a>
+        <?php endif; ?>
 
-            <a href="#cafes" class="btn">
-                Descubrir cafés
+        <div class="contenido-entrada">
+            <span class="fecha-entrada">
+                <?php echo esc_html( get_the_date() ); ?>
+            </span>
+        <h2>
+            <a href="<?php the_permalink(); ?>">
+                <?php the_title(); ?>
+            </a>
+
+        </h2>
+        <div class="resumen-entrada">
+            <?php the_excerpt(); ?>
+        </div>
+            <a href="<?php the_permalink(); ?>" class="leer-mas">
+                Leer más
             </a>
         </div>
-    </section>
+    </article>
+        <?php endwhile; ?>
+        
+    <div class="paginacion-blog">
+        <?php
+        the_posts_pagination();
+        ?>
+    </div>
+<?php else : ?>
+    <p class="sin-entradas">
+        Lo sentimos, todavia no se han publicado entradas.
+    </p>
+<?php endif; ?>
 
-    <section id="cafes" class="cafes">
-
-        <h2>Nuestros cafés</h2>
-
-        <p class="section-description">
-            Cuatro variedades, cuatro experiencias diferentes.
-        </p>
-
-        <div class="cafes-container">
-
-            <article class="cafe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/cafe1.jpg" alt="Café 1">
-                <h3>Café 1</h3>
-                <p>Origen: Pendiente</p>
-                <p>Notas: Pendiente</p>
-                <p>Tueste: Pendiente</p>
-                <strong>Precio: Pendiente</strong>
-            </article>
-
-            <article class="cafe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/cafe2.jpg" alt="Café 2">
-                <h3>Café 2</h3>
-                <p>Origen: Pendiente</p>
-                <p>Notas: Pendiente</p>
-                <p>Tueste: Pendiente</p>
-                <strong>Precio: Pendiente</strong>
-            </article>
-
-            <article class="cafe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/cafe3.jpg" alt="Café 3">
-                <h3>Café 3</h3>
-                <p>Origen: Pendiente</p>
-                <p>Notas: Pendiente</p>
-                <p>Tueste: Pendiente</p>
-                <strong>Precio: Pendiente</strong>
-            </article>
-
-            <article class="cafe-card">
-                <img src="<?php echo get_template_directory_uri(); ?>/images/cafe4.jpg" alt="Café 4">
-                <h3>Café 4</h3>
-                <p>Origen: Pendiente</p>
-                <p>Notas: Pendiente</p>
-                <p>Tueste: Pendiente</p>
-                <strong>Precio: Pendiente</strong>
-            </article>
-
-        </div>
-
-    </section>
-
+</section>
 </main>
 
 <?php get_footer(); ?>

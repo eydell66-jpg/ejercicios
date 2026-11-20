@@ -815,5 +815,216 @@ img {
         padding: 60px 7%;
     }
 }
+/* Pagina de contacto */
+
+.pagina-contacto {
+    width: 100%;
+    overflow: hidden;
+}
+/* Portada */
+.hero-contacto {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    padding: 65px 10%;
+    background: var(--color-texto);
+    color: var(--color-blanco);
+}
+.contenido-hero-contacto {
+    max-width: 720px;
+}
+.etiqueta-contacto {
+    display: inline-block;
+    color: var(--color-secundario);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+.contenido-hero-contacto h1 {
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+.contenido-hero-contacto p {
+    color: var(--color-fondo);
+    font-size: 17px;
+    line-height: 1.8;
+}
+/* Contenido */
+.contenido-contacto {
+    display: grid;
+    grid-template-columns: 1fr, 1fr;
+    gap: 65px;
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 85px 35px;
+    align-items: start;
+}
+/* Informacion */
+.informacion-contacto h2,
+.formulario-contacto-contenedor h2 {
+    color: var(--color-texto);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.informacion-contacto p {
+    color: #665b53;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+.dato-contacto {
+    border-top: 1px solid var(--color-fondo);
+    padding: 22px 0;
+}
+.dato-contacto h3 {
+    color: var(--color-texto);
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+.dato-contacto p {
+    color: #665448;
+    line-height: 1.7;
+}
+/* Formulario */
+.formulario-contacto-contenedor {
+    background: var(--color-fondo);
+    padding: 35px;
+}
+.formulario-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.formulario-contacto label {
+    color: var(--color-texto);
+    font-weight: 600;
+    margin-top: 8px;
+}
+.formulario-contacto input,
+.formulario-contacto textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid var(--color-fondo);
+    background: var(--color-blanco);
+    font-family: inherit;
+    font-size: 15px;
+}
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+    outline: 2px solid  var(--color-secundario);
+    border-color: var(--color-secundario);
+}
+.formulario-contacto button {
+    padding: 15px;
+    margin-top: 12px;
+    border: none;
+    background: var(--color-texto);
+    color: var(--color-blanco);
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3;
+}
+.formulario-contacto button:hover {
+    background: var(--color-secundario);
+}
+/* Adaptacion moviles */
+@media (max-width: 768) {
+    .hero-contacto {
+        min-height: 300px;
+        padding: 55px 7%;
+    }
+    .contenido-contacto {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 60px 7%;
+    }
+    .formulario-contacto-contenedor {
+        padding: 25px 20px ;
+    }
+}
+/* blog-index */
+.pagina-blog {
+    width: 100%;
+    overflow: hidden;
+}
+.cabecera-blog {
+    background: var(--color-principal);
+    color: var(--color-blanco);
+    text-align: center;
+    padding: 75px 20px;
+}
+.cabecera-blog h1 {
+    font-size: clamp(36px, 5vw, 52px);
+    margin-bottom: 15px;
+}
+.cabecera-blog p {
+    color: var(--color-fondo);
+    line-height: 1.8;
+}
+.listado-entradas {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 65px 25px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 30px;
+}
+.tarjeta-entrada {
+    background: var(--color-fondo);
+    overflow: hidden;
+}
+.imagen-entrada img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.contenido-entrada {
+    padding: 25px;
+}
+.fecha-entrada {
+    color: var(--color-secundario);
+    font-size: 13px;
+}
+.contenido-entrada h2 {
+    margin: 12px 0;
+    font-size: 22px;
+}
+.contenido-entrada h2 a {
+    color: var(--color-principal);
+    text-decoration: none;
+}
+.resumen-entrada {
+    color: var(--color-principal);
+    line-height: 1.7;
+}
+.leer-mas {
+    display: inline-block;
+    margin-top: 18px;
+    color: var(--color-secundario);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.paginacion-blog {
+    grid-column: 1 / -1;
+}
+.sin-entradas {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: var(--color-secundario);
+}
+@media (max-width: 768px) {
+    .listado-entradas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media (max-width: 550px) {
+    .listado-entradas {
+        grid-template-columns: 1fr;
+    }
+}
 
 
