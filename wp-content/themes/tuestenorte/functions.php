@@ -23,7 +23,7 @@ function tueste_norte_scripts() {
 add_action('wp_enqueue_scripts', 'tueste_norte_scripts');
 
 ?>
-/* Regristrar el tipo de contenido cafés */
+
 <?php 
 function tueste_norte_registrar_cafes() {
 
@@ -44,17 +44,33 @@ function tueste_norte_registrar_cafes() {
         'public' => true,
         'has_archive' => false,
         'menu_icon' => 'dashicons-coffee',
-        'supports' => array('title', 'thumbail'),
+        'supports' => array('title', 'thumbnail'),
         'show_in_rest' => true
     ));
 }
 add_action('init', 'tueste_norte_registrar_cafes');
 
+/* Registrar taxonomia */
+function tueste_norte_registrar_taxonomia_origen() {
+        $etiquetas = array(
+            'name' => 'Orígenes' ,
+            'singular_name' => 'Origen' ,
+            'search_items' => 'Buscar orígenes' ,
+            'all_items' => 'Todos los orígenes' ,
+            'edit_item' => 'Editar origen' ,
+            'update_item' => 'Actualizar origen' ,
+            'add_new-item' => 'Añadir nuevo origen' ,
+            'new_item_name' => 'Nombre del nuevo origen' ,
+            'menu_name' => 'Orígenes'
+            );
+        register_taxonomy('origen_cafe', array('cafe'), array(
+            'labels' => $etiquetas,
+            'hierarchical' => true,
+            'public' => true,
+            'show_in_rest' => true,
+            'show_admin_column' => true,
+            'rewrite' => array('slug' => 'origen-cafe')
 
-
-
-
-
-
-
+        ));
 }
+add_action('init', 'tueste_norte_registrar_taxonomia_origen');
